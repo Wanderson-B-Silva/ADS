@@ -1,0 +1,152 @@
+/* Estilização de texto e fontes */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Estilos para o header */
+header {
+    background: linear-gradient(to right, #000, #fff);
+    color: #000;
+    padding: 20px 0;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    min-height: 100px; /* Establece una altura mínima para el header */
+}
+
+.logo-samsung{
+    width: 200px; /* Ajuste este valor según sea necesario */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+}
+.logo-apple{
+    width: 65px; /* Ajuste este valor según sea necesario */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 30px;
+}
+
+.logo-samsung img,
+.logo-apple img {
+    width: 100%; /* Asegura que la imagen ocupe el 100% del ancho del contenedor */
+    height: auto;
+}
+header h1 {
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1; /* Asegura que el h1 esté por encima de los logos */
+}
+
+nav {
+    background: linear-gradient(to right, #000, #ffffff70);
+    overflow: hidden;
+    text-align: center;
+}
+nav a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    float: left;
+}
+nav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Uso de seletores de classe e ID */
+.intro {
+    background-color: #e2e2e2;
+    padding: 15px;
+    animation: fadeIn 2s ease-in-out;
+    text-align: center;
+}
+
+#comparison {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.device {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 10px;
+    flex: 1;
+    min-width: 300px;
+}
+
+/* Aplicação do Box Model */
+section {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+
+}
+
+h2 {
+    text-align: center;
+}
+
+.campo-maior {
+    width: 400px;
+    height: 60px; 
+}
+
+textarea.campo-maior {
+    height: 100px; 
+}
+
+/* Adição de cores e fundos */
+footer {
+    background: linear-gradient(to right, #000, #ffffff70);
+    color: #0f0f0f;
+    text-align: center;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    #comparison {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+    header, footer {
+        font-size: 16px;
+    }
+}
